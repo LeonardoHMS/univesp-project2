@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ html_language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/RS-favicon.ico' %}" type="image/x-icon">
+    <title>Rota dos sonhos - Turismo</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+        <ul>
+        <li><a href="#sobre-nos">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="#fale-conosco">Fale Conosco</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <section id="apresentacao">
+      <div id="logo-container">
+          <img src="{% static "img/RS-Turismo.png" %}" alt="RS-Turismo Logo">
+      </div>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="{% static "img/home/roma-italy.jpeg" %}" alt="Roma Italy" class="slideshow-img">
+        <div class="text">Explorando o Inexplorado</div>
+      </div>
+
+      <div class="slide fade">
+        <img src="{% static "img/home/taj-mahal.jpg" %}" alt="Taj Mahal" class="slideshow-img">
+        <div class="text">Viva Momentos Inesquecíveis</div>
+      </div>
+
+      <div class="slide fade">
+        <img src="{% static "img/home/muralha.jpeg" %}" alt="Muralha China" class="slideshow-img">
+        <div class="text">Aventura Sem Limites</div>
+      </div>
+      
+    </div>
+    <br>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  </section>
+
+  <!-- Seção Sobre Nós -->
+  <section id="sobre-nos">
+    <h2>Sobre Nós</h2>
+    <p>Somos uma agência de turismo comprometida em oferecer as melhores experiências de viagens para nossos clientes. Trabalhamos com destinos nacionais e internacionais.</p>
+  </section>
+
+  <!-- Seção Serviços -->
+  <section id="servicos">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+      <div class="servico-container">
+        <div class="servico">
+          <i class="fas fa-plane"></i> <!-- Ícone da Font Awesome -->
+          <h3>Viagens Aéreas</h3>
+          <p>Organizamos pacotes completos com voos para qualquer destino.</p>
+        </div>
+        <div class="servico">
+          <i class="fas fa-hotel"></i> <!-- Ícone da Font Awesome -->
+          <h3>Hospedagem</h3>
+          <p>Reservamos os melhores hotéis para você relaxar durante a viagem.</p>
+        </div>
+        <div class="servico">
+          <i class="fas fa-route"></i> <!-- Ícone da Font Awesome -->
+          <h3>Roteiros Personalizados</h3>
+          <p>Criamos roteiros sob medida para suas preferências.</p>
+        </div>
+        <div class="servico">
+          <i class="fas fa-umbrella-beach"></i> <!-- Ícone da Font Awesome -->
+          <h3>Destinos Exóticos</h3>
+          <p>Explore os lugares mais incríveis e menos conhecidos do mundo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Galeria de Fotos -->
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <div class="gallery">
+      <img src="img1.jpg" alt="Imagem de um Destino" />
+      <img src="img2.jpg" alt="Imagem de outro Destino" />
+      <img src="img3.jpg" alt="Imagem de uma Viagem" />
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>E-mail: contato@agenciaturismo.com.br</p>
+    <p>Telefone: (11) 99999-9999</p>
+  </section>
+
+  <!-- Seção Fale Conosco -->
+  <section id="fale-conosco">
+    <h2>Fale Conosco</h2>
+    <form id="contact-form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+  <button id="back-to-top" style="display: none; position: fixed; bottom: 30px; right: 30px; background-color: #005f73; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 20px; cursor: pointer; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">↑</button>
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Agência de Turismo. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="{% static "js/script.js" %}"></script>
+</body>
+</html>
