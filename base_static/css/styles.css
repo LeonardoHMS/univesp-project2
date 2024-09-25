@@ -7,11 +7,11 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #faf8f6;
     color: #333;
     line-height: 1.6;
   }
-  
+
   a {
     text-decoration: none;
     color: inherit;
@@ -34,7 +34,7 @@
     align-items: center;
     gap: 40px;  /* Espaçamento entre o logo e o slideshow */
     margin-bottom: 50px;
-    background-image: url('../img/background-wallpaper.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('../img/home/background-wallpaper.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size: cover; /* Cobre toda a seção */
     background-position: center; /* Centraliza a imagem */
     position: relative; /* Necessário para posicionar o pseudo-elemento */
@@ -192,7 +192,7 @@ section p {
   
 /* Serviços */
 #servicos {
-    background-color: white;
+    background-color: #faf8f6;
     padding: 60px 0;
 }
   
@@ -242,7 +242,7 @@ section p {
   
 /* Galeria */
 #galeria {
-    background-color: #ffffff;
+    background-color: #F2ECE3;
 }
   
 .gallery {
@@ -267,7 +267,7 @@ section p {
   
 /* Contato */
 #contato {
-    background-color: white;
+    background-color: #F2ECE3;
 }
   
 #contato p {
@@ -277,7 +277,7 @@ section p {
   
 /* Fale Conosco */
 #fale-conosco {
-    background-color: #ffffff;
+    background-color: #faf8f6;
     padding-bottom: 60px;
 }
   
@@ -294,7 +294,7 @@ form label {
     color: #005f73;
 }
   
-form input, form textarea {
+form input, form textarea, form select {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -311,7 +311,7 @@ form input:focus, form textarea:focus {
   
 form button {
     padding: 15px 20px;
-    background-color: #005f73;
+    background-color: #916C39;
     color: white;
     font-size: 18px;
     border: none;
@@ -325,11 +325,10 @@ form button:hover {
 }
 
 #back-to-top {
-    display: none; /* Inicialmente escondido */
     position: fixed;
-    bottom: 30px;
+    bottom: 80px;
     right: 30px;
-    background-color: #005f73; /* Cor de fundo */
+    background-color: black; /* Cor de fundo */
     color: white; /* Cor do texto */
     border: none; /* Sem borda */
     border-radius: 50%; /* Botão redondo */
@@ -342,14 +341,14 @@ form button:hover {
 }
   
 #back-to-top:hover {
-    background-color: #004747; /* Cor ao passar o mouse */
+    background-color: gray; /* Cor ao passar o mouse */
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #005f73;
+    background-color: #916C39;
     color: white;
     position: relative;
     width: 100%;

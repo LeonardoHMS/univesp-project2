@@ -1,0 +1,29 @@
+{% load static %}
+<section id="apresentacao">
+    <div id="logo-container">
+        <img src="{% static "img/home/RS-Turismo.png" %}" alt="RS-Turismo Logo">
+    </div>
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="{% static "img/home/carousel/roma-italy.jpeg" %}" alt="Roma Italy" class="slideshow-img">
+      <div class="text">Explorando o Inexplorado</div>
+    </div>
+
+    <div class="slide fade">
+      <img src="{% static "img/home/carousel/taj-mahal.jpg" %}" alt="Taj Mahal" class="slideshow-img">
+      <div class="text">Viva Momentos Inesquecíveis</div>
+    </div>
+
+    <div class="slide fade">
+      <img src="{% static "img/home/carousel/muralha.jpeg" %}" alt="Muralha China" class="slideshow-img">
+      <div class="text">Aventura Sem Limites</div>
+    </div>
+    
+  </div>
+  <br>
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+</section>

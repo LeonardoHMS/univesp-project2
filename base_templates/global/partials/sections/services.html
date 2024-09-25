@@ -1,0 +1,15 @@
+<section id="servicos">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+      <div class="servico-container">
+        {% for service in services %}
+          <div class="servico">
+            <i class="{{ service.bootstrap_icon }}"></i>
+            <h3>Viagens Aéreas</h3>
+            <p>Organizamos pacotes completos com voos para qualquer destino.</p>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </section>

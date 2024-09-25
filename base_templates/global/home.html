@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="{{ html_language }}">
+  <head>
+    {% include "global/partials/head.html" %}
+  </head>
+  <body>
+    {% include "global/partials/header.html" %}
+
+    {% include "global/partials/sections/presentation.html" %}
+
+    {% include "global/partials/sections/services.html" %}
+
+    {% include "global/partials/sections/gallery.html" %}
+
+    {% include "global/partials/sections/talkme.html" %}
+
+    {% include "global/partials/sections/contact.html" %}  
+
+    <button id="back-to-top"><i class="fas fa-home"></i></button>
+
+    {% include "global/partials/footer.html" %}
+
+    <script src="{% static "js/script.js" %}"></script>
+  </body>
+</html>

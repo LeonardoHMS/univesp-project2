@@ -52,3 +52,31 @@ window.scrollTo({
     behavior: 'smooth'
 });
 });
+
+// Controle dos slides da galeria
+let gallerySlideIndex = 1;
+showGallerySlides(gallerySlideIndex);
+
+function currentGallerySlide(n) {
+  showGallerySlides(gallerySlideIndex = n);
+}
+
+function showGallerySlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("gallery-slide");
+  let dots = document.getElementsByClassName("gallery-dot");
+
+  if (n > slides.length) { gallerySlideIndex = 1 }
+  if (n < 1) { gallerySlideIndex = slides.length }
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" gallery-active", "");
+  }
+
+  slides[gallerySlideIndex - 1].style.display = "block";
+  dots[gallerySlideIndex - 1].className += " gallery-active";
+}
