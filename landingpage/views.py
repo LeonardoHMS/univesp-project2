@@ -1,3 +1,5 @@
+from django.shortcuts import redirect
+from django.urls import reverse
 from django.views.generic import TemplateView
 
 from .forms.contact import ContactForm
@@ -15,3 +17,13 @@ class HomeView(TemplateView):
         context["clientcontact"] = ContactForm()
 
         return context
+
+    def post(self, request, *args, **kwargs):
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+            return redirect(reverse("home"))
+            # return self.render_to_response({"form": form, "success": True})
+
+        return self.render_to_response({"form": form})

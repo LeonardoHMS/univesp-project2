@@ -16,6 +16,9 @@ class Service(models.Model):
         verbose_name="Bootstrap icon",
     )
 
+    def __str__(self):
+        return self.name
+
 
 class ClientContact(models.Model):
     id = models.AutoField(primary_key=True)
@@ -30,7 +33,7 @@ class ClientContact(models.Model):
     )
     service = models.ForeignKey(
         Service,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         related_name="service",
         verbose_name="Serviço",
     )
@@ -38,6 +41,9 @@ class ClientContact(models.Model):
         max_length=300,
         verbose_name="Mensagem",
     )
+
+    def __str__(self):
+        return self.name
 
 
 class HomePageGalleryView(models.Model):
@@ -52,3 +58,6 @@ class HomePageGalleryView(models.Model):
         default="",
         verbose_name="Foto",
     )
+
+    def __str__(self):
+        return self.name
