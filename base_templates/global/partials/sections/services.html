@@ -5,8 +5,8 @@
         {% for service in services %}
           <div class="servico">
             <i class="{{ service.bootstrap_icon }}"></i>
-            <h3>Viagens Aéreas</h3>
-            <p>Organizamos pacotes completos com voos para qualquer destino.</p>
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
           </div>
         {% endfor %}
 
