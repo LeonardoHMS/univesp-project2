@@ -1,4 +1,3 @@
-// Slideshow automático
 let slideIndex = 0;
 showSlides();
 
@@ -15,7 +14,7 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Muda a cada 5 segundos
+  setTimeout(showSlides, 5000);
 }
 
 function currentSlide(n) {
@@ -23,7 +22,6 @@ function currentSlide(n) {
   showSlides();
 }
 
-// Navegação suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -35,7 +33,6 @@ anchor.addEventListener('click', function(e) {
 });
 });
 
-// Botão de voltar ao topo
 const backToTopButton = document.getElementById('back-to-top');
 
 window.onscroll = function() {
@@ -53,7 +50,6 @@ window.scrollTo({
 });
 });
 
-// Controle dos slides da galeria
 let gallerySlideIndex = 1;
 showGallerySlides(gallerySlideIndex);
 
@@ -80,3 +76,25 @@ function showGallerySlides(n) {
   slides[gallerySlideIndex - 1].style.display = "block";
   dots[gallerySlideIndex - 1].className += " gallery-active";
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+      },
+      navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+      },
+      effect: 'slide',
+      speed: 1000,
+  });
+});

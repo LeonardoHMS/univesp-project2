@@ -60,4 +60,4 @@ class HomePageGalleryView(models.Model):
     )
 
     def __str__(self):
-        return self.name
+        return self.alt

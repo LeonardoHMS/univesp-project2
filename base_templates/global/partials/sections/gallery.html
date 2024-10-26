@@ -1,11 +1,42 @@
 {% load static %}
 <section id="galeria">
     <h2>Galeria</h2>
-    <div class="gallery">
-
-      {% for image in galleryviews %}
-        <img src="{{ image.cover.url }}" alt="{{ image.alt }}"/>
-      {% endfor %}
-
+    <div class="carousel-container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for image in galleryviews %}
+                    <div class="swiper-slide">
+                        <img src="{{ image.cover.url }}" alt="{{ image.alt }}">
+                        <div class="swiper-slide-caption">{{ image.alt }}</div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </div>
-  </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                effect: 'slide',
+                speed: 1000,
+            });
+        });
+    </script>
+</section>
