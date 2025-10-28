@@ -18,6 +18,10 @@ class Service(models.Model):
 
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name = "Serviço"
+        verbose_name_plural = "Serviços"
 
 
 class ClientContact(models.Model):
@@ -45,6 +49,10 @@ class ClientContact(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "Contato Cliente"
+        verbose_name_plural = "Contatos Clientes"
+
 
 class HomePageGalleryView(models.Model):
     id = models.AutoField(primary_key=True)
@@ -61,3 +69,7 @@ class HomePageGalleryView(models.Model):
 
     def __str__(self):
         return self.alt
+
+    class Meta:
+        verbose_name = "HomePage Galeria"
+        verbose_name_plural = "HomePage Galerias"
